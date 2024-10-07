@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { FaChalkboardTeacher } from "react-icons/fa";
 import { GrHomeRounded } from "react-icons/gr";
+import { RiHome5Line } from "react-icons/ri";
 import { PiStudentBold } from "react-icons/pi";
 import { IoPeopleSharp } from "react-icons/io5";
 import { GiTeacher } from "react-icons/gi";
@@ -22,7 +23,7 @@ const menuItems = [
     title: "MENU",
     items: [
       {
-        icon: <GrHomeRounded size={24} color="#000" />,
+        icon: <RiHome5Line size={24} color="#000" />,
         title: "Home",
         href: "/",
       },
@@ -51,7 +52,11 @@ const menuItems = [
         title: "Lessons",
         href: "/lessons",
       },
-      { icon: <PiExam />, title: "Exams", href: "/exams" },
+      {
+        icon: <PiExam size={24} color="#000" />,
+        title: "Exams",
+        href: "/exams",
+      },
       {
         icon: <MdOutlineAssignment size={24} color="#000" />,
         title: "Assignments",
@@ -68,7 +73,7 @@ const menuItems = [
         href: "/calender",
       },
       {
-        icon: <TiMessages />,
+        icon: <TiMessages size={24} color="#000" />,
         title: "Messages",
         href: "/messages",
       },
@@ -106,10 +111,16 @@ const Menu = () => {
     <div className="mt-4 text-sm">
       {menuItems.map((menus) => (
         <div className="flex flex-col gap-2" key={menus.title}>
-          <span className="hidden lg:block">{menus.title}</span>
+          <span className="hidden lg:block text-gray-400 font-light my-4">
+            {menus.title}
+          </span>
           {menus.items.map((item) => (
-            <Link href={item.href} key={item.title}>
-              {item.icon} {item.title}
+            <Link
+              href={item.href}
+              key={item.title}
+              className="flex items-center justify-center lg:justify-start gap-4 text-gray-500 py-2"
+            >
+              {item.icon} <span className="hidden lg:block">{item.title}</span>
             </Link>
           ))}
         </div>
