@@ -6,7 +6,7 @@ import { RxAvatar } from "react-icons/rx";
 
 const Navbar = () => {
   return (
-    <div className="flex items-center justify-between p-4">
+    <div className="flex flex-row items-center justify-between">
       {/* Search Bar */}
 
       <div className="hidden md:flex items-center gap-2 text-xs rounded-full ring-[1.5px] ring-gray-300 px-2">
