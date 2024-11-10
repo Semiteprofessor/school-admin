@@ -108,7 +108,7 @@ const Menu = () => {
   return (
     <div className="mt-4 text-sm">
       {menuItems.map((menus) => (
-        <div className="flex flex-col gap-4" key={menus.title}>
+        <div className="flex flex-col gap-2" key={menus.title}>
           <span className="hidden lg:block text-gray-400 font-light my-4">
             {menus.title}
           </span>
@@ -116,7 +116,7 @@ const Menu = () => {
             <Link
               href={item.href}
               key={item.title}
-              className="flex items-center justify-center lg:justify-start gap-4 text-gray-500 py-2"
+              className="flex items-center justify-center lg:justify-start gap-2 text-gray-500 py-2"
             >
               {item.icon} <span className="hidden lg:block">{item.title}</span>
             </Link>

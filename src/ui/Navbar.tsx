@@ -6,18 +6,18 @@ import { RxAvatar } from "react-icons/rx";
 
 const Navbar = () => {
   return (
-    <div className="flex flex-row items-center justify-between">
+    <div className="flex items-center justify-between p-4">
       {/* Search Bar */}
 
       <div className="hidden md:flex items-center gap-2 text-xs rounded-full ring-[1.5px] ring-gray-300 px-2">
         <FiSearch size={24} color="gray" />
         <input
           type="text"
-          placeholder="Search..."
+          placeholder="  Search..."
           className="w-[200px] p-2 bg-transparent outline-none"
         />
       </div>
-      {/* Icon & User */}
+      {/* Icon & User */}  
       <div className="flex items-center gap-6 justify-end w-full">
         <div className="bg-white rounded-full w-7 h-7 flex items-center justify-center cursor-pointer">
           <LuMessagesSquare size={24} color="#000" />
